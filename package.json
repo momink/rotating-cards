@@ -1,0 +1,14 @@
+{
+  "name": "rotating-card",
+  "version": "1.0.0",
+  "description": "css for responsive rotating card",
+  "main": "index.html",
+  "scripts": {
+    "sass": "node-sass sass/main.scss css/styles.css"
+  },
+  "author": "Momin Khalil",
+  "license": "ISC",
+  "devDependencies": {
+    "node-sass": "^6.0.1"
+  }
+}

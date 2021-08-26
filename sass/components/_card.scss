@@ -1,0 +1,40 @@
+
+.card {
+    background-color: $color-secondary;   
+    max-width: 25%;
+    width: 30%;
+    height: 50rem;
+    perspective: 150rem;  //must be on the parent  of the rotating element
+    position: relative;
+    margin: 3px;
+    
+    &_side {
+        transition: all 1.5s ;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        backface-visibility: hidden;
+        box-shadow: 0 1.5rem 3rem rgba($color-shadow,.4);
+
+        & img {
+            width: 100%; 
+            height: 100%;
+            object-fit: cover;
+        }
+
+        &--back {
+            transform: rotateY(-180deg);
+        }
+    }
+
+    &:hover &_side--front {
+        transform: rotateY(-180deg);
+    }
+
+    &:hover &_side--back {
+        transform: rotateY(0deg);
+    }
+
+
+}
